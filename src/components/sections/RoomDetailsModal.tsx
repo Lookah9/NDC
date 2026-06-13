@@ -5,37 +5,29 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export function RoomDetailsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const { lang } = useLanguage();
 
+  const tableDataRo = [
+    { service: "Zugrăveli interioare", category: "Zugrăveli", description: "Zugrăveli pentru pereți și tavane. Include pregătire, reparații glet și aplicare lavabilă premium.", details: "Protejare completă mobilier, curățenie inclusă" },
+    { service: "Reparații pereți și tavane", category: "Reparații", description: "Refacem suprafețe deteriorate: fisuri, infiltrații, denivelări, colțuri lovite.", details: "Glet de încărcare, armare cu plasă, finisare" },
+    { service: "Tavane din rigips", category: "Gips-Carton", description: "Tavane suspendate simple, drepte, coborâte sau decorative cu zone tehnice.", details: "Mascări conducte, instalații, spoturi integrate" },
+    { service: "Scafe LED", category: "Amenajări Decorative", description: "Scafe estetice din rigips pentru iluminare ambientală în living, dormitor, hol.", details: "Aliniere perfectă, pregătite pentru bandă LED" },
+    { service: "Pereți despărțitori", category: "Gips-Carton", description: "Compartimentări interioare rapide din gips-carton pentru izolarea camerelor.", details: "Izolare fonică cu vată minerală, structură metalică" },
+    { service: "Nișe și elemente decorative", category: "Amenajări Decorative", description: "Bespoke: rafturi rigips integrate, pereți TV decorați, nișe iluminate.", details: "Design customizat, finisare premium a colțurilor" },
+    { service: "Finisaje interioare", category: "Pregătire & Finisaje", description: "Gletuire fină de finisaj, șlefuire mecanică curată (cu aspirator), amorsare.", details: "Planeitate perfectă, șlefuire cu aspirare integrată" },
+    { service: "Amenajări spații comerciale", category: "Amenajări Complete", description: "Renovare, reîmprospătare și compartimentare rapidă pentru magazine, saloane, birouri.", details: "Execuție rapidă pentru deschidere la termen" },
+  ];
+
   const tableDataEn = [
-    { room: "Ground Floor Suite", surface: "43 m²", bathroom: "En-suite", bed: "100×200", floor: "Ground Floor", amenities: "Direct access to terrace" },
-    { room: "2 Bedroom Suite", surface: "48 m²", bathroom: "En-suite", bed: "2 – 160×200", floor: "1st Floor", amenities: "Small Balcony" },
-    { room: "Master Bedroom", surface: "33 m²", bathroom: "Individual – Across Hallway", bed: "200×200", floor: "1st Floor", amenities: "Small Balcony" },
-    { room: "Bedroom", surface: "28 m²", bathroom: "En-suite", bed: "160×200", floor: "1st Floor", amenities: "Small Balcony" },
-    { room: "Master Suite", surface: "46 m²", bathroom: "En-suite", bed: "200×200", floor: "1st Floor", amenities: "Terrace with sea view" },
-    { room: "Suite", surface: "30 m²", bathroom: "En-suite", bed: "180×200", floor: "1st Floor", amenities: "Garden View" },
-    { room: "Bedroom", surface: "24 m²", bathroom: "En-suite", bed: "160×200", floor: "2nd Floor", amenities: "Garden View" },
-    { room: "Suite", surface: "33 m²", bathroom: "En-suite", bed: "160×200", floor: "2nd Floor", amenities: "Small Balcony" },
-    { room: "Twin Bedroom", surface: "21 m²", bathroom: "Individual – Across Hallway", bed: "160×200", floor: "2nd Floor", amenities: "Sea View" },
-    { room: "Twin Bedroom", surface: "22.4 m²", bathroom: "Individual – Across Hallway", bed: "2 – 100×200", floor: "2nd Floor", amenities: "Sea View" },
-    { room: "Bedroom", surface: "25 m²", bathroom: "Shared – Across Hallway", bed: "160×200", floor: "2nd Floor", amenities: "Garden View" },
-    { room: "Bedroom", surface: "25 m²", bathroom: "Shared – Down the Hallway", bed: "160×200", floor: "2nd 1/2 Floor", amenities: "Panoramic View" },
+    { service: "Interior Painting", category: "Painting", description: "Painting for walls and ceilings. Includes surface prep, plaster patching, and premium coat application.", details: "Complete furniture protection, final cleaning included" },
+    { service: "Wall & Ceiling Repairs", category: "Repairs", description: "Restoring damaged surfaces: cracks, holes, water leaks, uneven areas, or post-installation repair.", details: "Base coat plastering, joint mesh reinforcement, skim coat" },
+    { service: "Drywall Ceilings", category: "Drywall Systems", description: "Standard or decorative suspended ceilings, pipe concealments, and technical voids.", details: "Integrated spotlights, duct masking" },
+    { service: "LED Coves", category: "Decorative Details", description: "Drywall coves for ambient lighting in living rooms, bedrooms, hallways, or office spaces.", details: "Perfect alignment, ready for LED strip integration" },
+    { service: "Drywall Partitions", category: "Drywall Systems", description: "Fast drywall partition wall framing to split rooms or create separate areas.", details: "Soundproofing with rockwool insulation, metallic stud framing" },
+    { service: "Niches & Decorative Elements", category: "Decorative Details", description: "Custom integrated shelving, television accent walls, and illuminated niches.", details: "Bespoke design, premium corner finishing" },
+    { service: "Interior Finishes", category: "Prep & Finishing", description: "Skim coating, dustless mechanical sanding, priming, and precise joint reinforcing.", details: "Perfect flatness, dustless sanding with vacuum extraction" },
+    { service: "Commercial Fit-outs", category: "Complete Fittings", description: "Rapid layout modification, painting, partition framing, and lighting setups tailored for businesses.", details: "Fast execution for on-time business opening" },
   ];
 
-  const tableDataFr = [
-    { room: "Suite au rez-de-chaussée", surface: "43 m²", bathroom: "En-suite", bed: "100×200", floor: "Rez-de-chaussée", amenities: "Accès direct à la terrasse" },
-    { room: "Suite 2 chambres", surface: "48 m²", bathroom: "En-suite", bed: "2 × 160×200", floor: "1er étage", amenities: "Petit balcon" },
-    { room: "Chambre principale", surface: "33 m²", bathroom: "Salle de bains privative – de l’autre côté du couloir", bed: "200×200", floor: "1er étage", amenities: "Petit balcon" },
-    { room: "Chambre", surface: "28 m²", bathroom: "En-suite", bed: "160×200", floor: "1er étage", amenities: "Petit balcon" },
-    { room: "Master Suite", surface: "46 m²", bathroom: "En-suite", bed: "200×200", floor: "1er étage", amenities: "Terrasse avec vue sur la mer" },
-    { room: "Suite", surface: "30 m²", bathroom: "En-suite", bed: "180×200", floor: "1er étage", amenities: "Vue sur le jardin" },
-    { room: "Chambre", surface: "24 m²", bathroom: "En-suite", bed: "160×200", floor: "2e étage", amenities: "Vue sur le jardin" },
-    { room: "Suite", surface: "33 m²", bathroom: "En-suite", bed: "160×200", floor: "2e étage", amenities: "Petit balcon" },
-    { room: "Chambre twin", surface: "21 m²", bathroom: "Salle de bains privative – de l’autre côté du couloir", bed: "160×200", floor: "2e étage", amenities: "Vue sur la mer" },
-    { room: "Chambre twin", surface: "22,4 m²", bathroom: "Salle de bains privative – de l’autre côté du couloir", bed: "2 × 100×200", floor: "2e étage", amenities: "Vue sur la mer" },
-    { room: "Chambre", surface: "25 m²", bathroom: "Salle de bains partagée – de l’autre côté du couloir", bed: "160×200", floor: "2e étage", amenities: "Vue sur le jardin" },
-    { room: "Chambre", surface: "25 m²", bathroom: "Salle de bains partagée – plus loin dans le couloir", bed: "160×200", floor: "Entresol", amenities: "Vue panoramique" },
-  ];
-
-  const tableData = lang === 'fr' ? tableDataFr : tableDataEn;
+  const tableData = lang === 'ro' ? tableDataRo : tableDataEn;
 
   return (
     <AnimatePresence>
@@ -60,31 +52,27 @@ export function RoomDetailsModal({ isOpen, onClose }: { isOpen: boolean; onClose
             className="w-full max-w-6xl max-h-full overflow-y-auto pr-4 thin-scrollbar pb-16"
           >
             <div className="text-center mb-12 mt-12">
-              <h2 className="font-serif text-3xl md:text-5xl mb-4">{lang === 'fr' ? 'Détail des chambres' : 'Room Details'}</h2>
-              <p className="text-brand-charcoal/60 uppercase tracking-widest text-xs">{lang === 'fr' ? 'Hébergements Villa Norah' : 'Villa Norah Accommodations'}</p>
+              <h2 className="font-serif text-3xl md:text-5xl mb-4">{lang === 'ro' ? 'Ghid de Servicii' : 'Services Directory'}</h2>
+              <p className="text-brand-charcoal/60 uppercase tracking-widest text-xs">{lang === 'ro' ? 'N&D Construct Servicii' : 'N&D Construct Services'}</p>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[800px]">
                 <thead>
                   <tr className="border-b border-brand-charcoal/20 text-xs tracking-widest uppercase opacity-60">
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Chambres' : 'Rooms'}</th>
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Surface' : 'Surface'}</th>
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Salle de bains' : 'Bathroom'}</th>
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Lit' : 'Bed'}</th>
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Étage' : 'Floor'}</th>
-                    <th className="py-4 px-4 font-normal">{lang === 'fr' ? 'Atouts' : 'Amenities'}</th>
+                    <th className="py-4 px-4 font-normal">{lang === 'ro' ? 'Serviciu' : 'Service'}</th>
+                    <th className="py-4 px-4 font-normal">{lang === 'ro' ? 'Categorie' : 'Category'}</th>
+                    <th className="py-4 px-4 font-normal">{lang === 'ro' ? 'Descriere' : 'Description'}</th>
+                    <th className="py-4 px-4 font-normal">{lang === 'ro' ? 'Detalii Cheie' : 'Key Details'}</th>
                   </tr>
                 </thead>
                 <tbody className="text-sm">
                   {tableData.map((row, i) => (
                     <tr key={i} className="border-b border-brand-charcoal/10 hover:bg-white/40 transition-colors">
-                      <td className="py-4 px-4 font-serif text-lg">{row.room}</td>
-                      <td className="py-4 px-4 opacity-80">{row.surface}</td>
-                      <td className="py-4 px-4 opacity-80">{row.bathroom}</td>
-                      <td className="py-4 px-4 opacity-80">{row.bed}</td>
-                      <td className="py-4 px-4 opacity-80">{row.floor}</td>
-                      <td className="py-4 px-4 opacity-80">{row.amenities}</td>
+                      <td className="py-4 px-4 font-serif text-lg">{row.service}</td>
+                      <td className="py-4 px-4 opacity-85 font-semibold text-xs tracking-wider uppercase">{row.category}</td>
+                      <td className="py-4 px-4 opacity-80 max-w-md leading-relaxed">{row.description}</td>
+                      <td className="py-4 px-4 opacity-80 italic text-brand-charcoal/70">{row.details}</td>
                     </tr>
                   ))}
                 </tbody>

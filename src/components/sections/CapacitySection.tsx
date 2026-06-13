@@ -8,24 +8,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ASSET_PREFIX } from "@/lib/utils";
 
-const roomImages = [
-  `${ASSET_PREFIX}/VN Rooms/20210823_163235_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_163716_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_163921_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_164159_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_164247_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_164721_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_165531_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/20210823_165753_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -102_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -103_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -109_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -116_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -118_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -54_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -60_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -62_converted.webp`,
-  `${ASSET_PREFIX}/VN Rooms/Villa -68_converted.webp`,
+const serviceImages = [
+  `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
+  `${ASSET_PREFIX}/projects/remodeling-2.jpg`,
+  `${ASSET_PREFIX}/projects/remodeling-3.jpg`,
+  `${ASSET_PREFIX}/projects/design-1.jpg`,
+  `${ASSET_PREFIX}/projects/design-2.jpg`,
+  `${ASSET_PREFIX}/projects/design-3.jpg`,
+  `${ASSET_PREFIX}/projects/repairs-1.jpg`,
+  `${ASSET_PREFIX}/projects/repairs-2.jpg`,
+  `${ASSET_PREFIX}/projects/repairs-3.jpg`,
+  `${ASSET_PREFIX}/projects/construction-1.jpg`,
+  `${ASSET_PREFIX}/projects/construction-2.jpg`,
+  `${ASSET_PREFIX}/projects/construction-3.jpg`,
 ];
 
 export default function CapacitySection() {
@@ -53,7 +48,7 @@ export default function CapacitySection() {
   };
 
   return (
-    <section className="py-16 md:py-32 px-4 md:px-8 max-w-[100rem] mx-auto text-center flex flex-col items-center justify-center">
+    <section className="py-16 md:py-32 px-4 md:px-8 max-w-[100rem] mx-auto text-center flex flex-col items-center justify-center bg-brand-ivory">
       
       <motion.div
          initial={{ opacity: 0, y: 30 }}
@@ -63,32 +58,30 @@ export default function CapacitySection() {
          className="max-w-3xl mb-16"
       >
         <h2 className="font-serif text-4xl md:text-6xl mb-8">
-          {lang === 'fr' ? 'Séjours & Réceptions' : 'Rooms & Gatherings'}
+          {lang === 'ro' ? 'Servicii & Amenajări' : 'Services & Fitting'}
         </h2>
         <p className="text-brand-charcoal/80 leading-relaxed text-sm md:text-base font-light mb-12">
-          {lang === 'fr'
-            ? "Déployée sur trois niveaux et près de 800 m², Villa Norah associe l’intimité d’une résidence privée à l’élégance d’un lieu pensé pour recevoir. La villa comprend 12 chambres et suites, dont plusieurs disposent d’une vue sur la mer ou le jardin, d’un balcon, d’une terrasse ou d’un accès direct vers l’extérieur, ainsi que des espaces de réception adaptés aux séjours privés, aux réunions intimistes et aux événements élégants."
-            : "Spread across three storeys and approximately 800 sqm, Villa Norah combines the intimacy of a private residence with the ease of a composed hosting setting. The villa offers 12 bedrooms and suites, many with sea views, garden views, balconies, terraces or direct outdoor access, alongside reception spaces suited to private stays, intimate gatherings and elegant events."}
+          {lang === 'ro'
+            ? "Oferim servicii complete de finisaje și renovări interioare, executate cu atenție sporită la detalii. De la zugrăveli rapide și uniforme până la compartimentări complexe din gips-carton (rigips) și scafe LED decorative."
+            : "We offer complete interior finishing and renovation services, executed with high attention to detail. From rapid and uniform painting to complex drywall partition walls and decorative LED coves."}
         </p>
         
         <div className="flex items-center justify-center gap-4 text-[0.65rem] md:text-xs tracking-[0.2em] uppercase opacity-60 mb-12 flex-wrap">
-          <span>{lang === 'fr' ? '12 chambres et suites' : '12 rooms & suites'}</span>
+          <span>{lang === 'ro' ? 'Zugrăveli Profesionale' : 'Professional Painting'}</span>
           <span className="hidden sm:inline">·</span>
-          <span>{lang === 'fr' ? '800 m²' : '800 sqm'}</span>
+          <span>{lang === 'ro' ? 'Sisteme Rigips' : 'Drywall Systems'}</span>
           <span className="hidden sm:inline">·</span>
-          <span>{lang === 'fr' ? 'espaces de réception' : 'reception spaces'}</span>
+          <span>{lang === 'ro' ? 'Scafe LED decorative' : 'Decorative LED Coves'}</span>
           <span className="hidden sm:inline">·</span>
-          <span>{lang === 'fr' ? 'jardins botaniques' : 'botanical grounds'}</span>
-          <span className="hidden sm:inline">·</span>
-          <span>{lang === 'fr' ? 'piscine extérieure' : 'outdoor pool'}</span>
+          <span>{lang === 'ro' ? 'Finisaje de Precizie' : 'Precision Finishes'}</span>
         </div>
 
         <Button onClick={() => setIsModalOpen(true)}>
-          {lang === 'fr' ? 'Voir le détail des chambres' : 'View Room Details'}
+          {lang === 'ro' ? 'Vezi Detalii Servicii' : 'View Service Details'}
         </Button>
       </motion.div>
 
-      {/* Rooms Carousel */}
+      {/* Services Carousel */}
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -107,13 +100,13 @@ export default function CapacitySection() {
           onScroll={handleScroll}
           className="flex overflow-x-auto gap-4 md:gap-6 snap-x snap-mandatory thin-scrollbar pb-6 px-4 md:px-0"
         >
-          {roomImages.map((src, idx) => (
+          {serviceImages.map((src, idx) => (
             <div key={idx} className="shrink-0 w-[280px] md:w-[400px] aspect-[4/5] snap-center overflow-hidden relative group">
               <div className="absolute inset-0 bg-brand-charcoal/5 group-hover:bg-transparent transition-colors duration-500 z-10" />
               {(hasInteracted || idx < 3) ? (
                 <img 
                   src={src} 
-                  alt={`Room detail ${idx + 1}`} 
+                  alt={`Service work ${idx + 1}`} 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   loading={idx < 3 ? "eager" : "lazy"}
                   decoding="async"

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Shield } from "lucide-react";
 import { ASSET_PREFIX } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -33,20 +32,14 @@ export default function Header() {
     [0, 100],
     ["rgba(255, 255, 255, 0.9)", "rgba(42, 44, 43, 1)"] // White to Charcoal
   );
-  
-  const borderColor = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0.3)", "rgba(42, 44, 43, 0.2)"]
-  );
 
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 transition-all duration-500 ease-out bg-transparent"
     >
       {/* Left */}
-      <motion.div style={{ color: textColor }} className="flex-1 text-sm tracking-[0.15em] uppercase uppercase font-medium">
-        Villa Norah
+      <motion.div style={{ color: textColor }} className="flex-1 text-sm tracking-[0.15em] uppercase font-semibold">
+        N&D Construct
       </motion.div>
 
       {/* Center - Logo */}
@@ -55,9 +48,9 @@ export default function Header() {
         className="flex-1 flex justify-center items-center relative pointer-events-none h-14"
       >
         <motion.img 
-          src={`${ASSET_PREFIX}/Logos/Logo_white_optimized.png`}
-          alt="Saint Georges White"
-          style={{ opacity: whiteLogoOpacity }}
+          src={`${ASSET_PREFIX}/Logos/Logo.png`}
+          alt="N&D Construct Logo"
+          style={{ opacity: whiteLogoOpacity, filter: "brightness(0) invert(1)" }}
           className="absolute h-full w-auto object-contain pointer-events-auto cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           width={300}
@@ -66,8 +59,8 @@ export default function Header() {
           decoding="async"
         />
         <motion.img 
-          src={`${ASSET_PREFIX}/Logos/Logo_black_optimized.png`}
-          alt="Saint Georges Black"
+          src={`${ASSET_PREFIX}/Logos/Logo.png`}
+          alt="N&D Construct Logo"
           style={{ opacity: blackLogoOpacity }}
           className="absolute h-full w-auto object-contain pointer-events-auto cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -89,10 +82,10 @@ export default function Header() {
           </button>
           <div className={`w-[1px] ${isScrolled ? 'bg-brand-charcoal/20' : 'bg-white/30'}`} />
           <button 
-            className={`px-3 py-1.5 text-[0.6rem] tracking-widest transition-all duration-300 ${lang === 'fr' ? (isScrolled ? 'bg-brand-charcoal text-white' : 'bg-white text-brand-charcoal') : (isScrolled ? 'text-brand-charcoal hover:bg-brand-charcoal/5' : 'text-white hover:bg-white/10')}`}
-            onClick={() => setLang('fr')}
+            className={`px-3 py-1.5 text-[0.6rem] tracking-widest transition-all duration-300 ${lang === 'ro' ? (isScrolled ? 'bg-brand-charcoal text-white' : 'bg-white text-brand-charcoal') : (isScrolled ? 'text-brand-charcoal hover:bg-brand-charcoal/5' : 'text-white hover:bg-white/10')}`}
+            onClick={() => setLang('ro')}
           >
-            FR
+            RO
           </button>
         </div>
         <button
@@ -105,7 +98,7 @@ export default function Header() {
             document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          {lang === 'fr' ? 'DEMANDE' : 'ENQUIRE'}
+          {lang === 'ro' ? 'CONTACT' : 'CONTACT'}
         </button>
       </motion.div>
     </motion.header>

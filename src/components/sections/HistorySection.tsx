@@ -8,18 +8,18 @@ export default function HistorySection() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 px-8 flex flex-col items-center text-center z-10 relative">
+    <section className="py-16 md:py-24 px-8 flex flex-col items-center text-center z-10 relative bg-brand-ivory">
       <motion.img 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        src={`${ASSET_PREFIX}/villanorah sketch.png`}
-        alt="Villa Norah Sketch" 
-        className="w-32 md:w-48 mb-12 opacity-80"
+        src={`${ASSET_PREFIX}/Logos/Logo.png`}
+        alt="N&D Construct Logo" 
+        className="w-40 md:w-56 mb-12 opacity-90 object-contain"
         loading="lazy"
-        width={192}
-        height={132}
+        width={224}
+        height={100}
       />
       
       <motion.div
@@ -30,9 +30,9 @@ export default function HistorySection() {
         className="max-w-3xl text-brand-charcoal/80 font-light leading-[1.8] text-[0.95rem] md:text-[1.05rem]"
       >
         <p>
-          {lang === 'fr' 
-            ? "La Villa Norah remonte à 1897. Construite par Alfred et Maria Gibbons, cette magnifique demeure de la Belle Époque porte le nom de leur fille. En 1923, la villa est acquise par Louis Emile Schlienger, parfumeur de renom et président de la société Bernard Frères. Schlienger fait appel à l’architecte Léon Lebel pour transformer la villa, en conciliant tradition patrimoniale et modernité. Elle abrite notamment un escalier d’honneur en fer forgé signé Richard Desvallières. Aujourd’hui, Villa Norah demeure le témoignage vivant d’une histoire riche, où patrimoine et élégance se rencontrent avec naturel."
-            : "Villa Norah traces its origins back to 1897, built by Alfred and Maria Gibbons as a magnificent “belle époque” mansion named after their daughter. In 1923, the villa was acquired by Louis Emile Schlienger, a renowned perfumer and president of Bernard Frères Company. Schlienger enlisted architect Leon Lebel to transform the villa, merging nostalgic tradition with modern design. Notably, the villa features an honorary forged iron staircase by Richard Desvallieres. Today, Villa Norah stands as a testament to its rich history, offering an exquisite blend of heritage and luxury."}
+          {lang === 'ro' 
+            ? "Suntem o echipă dedicată lucrărilor de amenajări interioare și finisaje de înaltă precizie în București și Ilfov. Specializați în zugrăveli profesionale, montaj sisteme de gips-carton (rigips), finisare gleturi și detalii decorative premium, ne asumăm responsabilitatea de a transforma orice spațiu într-un ambient rafinat, durabil și curat. Folosim exclusiv materiale calitative și tehnici moderne de execuție, garantând planeitate impecabilă a suprafețelor și respectarea termenelor promise."
+            : "We are a dedicated team providing high-precision interior fit-outs and premium finishes in Bucharest and Ilfov. Specialized in professional painting, drywall systems installation, plaster finishing, and premium decorative details, we take responsibility for transforming any space into a refined, durable, and clean environment. We use only high-quality materials and modern execution techniques, guaranteeing impeccable surface flatness and strict adherence to agreed deadlines."}
         </p>
       </motion.div>
     </section>

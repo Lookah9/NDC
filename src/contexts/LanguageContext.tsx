@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-type Language = "en" | "fr";
+type Language = "ro" | "en";
 
 interface LanguageContextProps {
   lang: Language;
@@ -12,7 +12,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>("en");
+  const [lang, setLang] = useState<Language>("ro");
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>

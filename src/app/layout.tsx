@@ -19,8 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   
   return {
-    title: 'Villa Norah | Exclusive Private Estate in the French Riviera',
-    description: 'Weddings, corporate retreats, private celebrations and elegant stays in a secluded botanical setting.',
+    title: 'N&D Construct | Finisaje Premium & Amenajări Decorative București',
+    description: 'Specialiști în finisaje premium, zugrăveli, tavane rigips și scafe LED decorative în București și Ilfov.',
     icons: {
       icon: [
         { url: `${basePath}/favicon-32x32.png`, sizes: '32x32', type: 'image/png' },
@@ -40,10 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`overscroll-none ${playfair.variable} ${inter.variable}`}>
+    <html lang="ro" className={`overscroll-none ${playfair.variable} ${inter.variable}`}>
       <head>
-        <link rel="preload" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/Hero_converted.webp`} as="image" fetchpriority="high" media="(min-width: 769px)" />
-        <link rel="preload" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/Hero_mobile_converted.webp`} as="image" fetchpriority="high" media="(max-width: 768px)" />
+        <link rel="preload" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/HeroND.png`} as="image" fetchPriority="high" />
       </head>
       <body className="overscroll-none font-sans antialiased text-brand-charcoal bg-brand-ivory min-h-screen">
         <LanguageProvider>

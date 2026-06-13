@@ -9,33 +9,21 @@ import { ASSET_PREFIX } from "@/lib/utils";
 import { GalleryModal } from "../GalleryModal";
 
 const detailsGallery = [
-  `${ASSET_PREFIX}/VN Explore Details/Villa -105_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -107_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -129_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -13_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -14_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -17_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -23_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -30_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -38_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -40_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -43_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -45_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Details/Villa -48_converted.webp`,
+  `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
+  `${ASSET_PREFIX}/projects/remodeling-2.jpg`,
+  `${ASSET_PREFIX}/projects/remodeling-3.jpg`,
+  `${ASSET_PREFIX}/projects/design-1.jpg`,
+  `${ASSET_PREFIX}/projects/design-2.jpg`,
+  `${ASSET_PREFIX}/projects/design-3.jpg`,
 ];
 
 const viewsGallery = [
-  `${ASSET_PREFIX}/VN Explore Views/Villa -123_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -124_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -125_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -126_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -132_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -133_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -61_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -62_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -63_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -64_converted.webp`,
-  `${ASSET_PREFIX}/VN Explore Views/Villa -65_converted.webp`,
+  `${ASSET_PREFIX}/projects/repairs-1.jpg`,
+  `${ASSET_PREFIX}/projects/repairs-2.jpg`,
+  `${ASSET_PREFIX}/projects/repairs-3.jpg`,
+  `${ASSET_PREFIX}/projects/construction-1.jpg`,
+  `${ASSET_PREFIX}/projects/construction-2.jpg`,
+  `${ASSET_PREFIX}/projects/construction-3.jpg`,
 ];
 
 function EditorialScrollySection({ 
@@ -111,7 +99,7 @@ function EditorialScrollySection({
     : "order-2 md:order-2";
 
   return (
-    <section ref={containerRef} className="relative min-h-screen md:h-[150vh]">
+    <section ref={containerRef} className="relative min-h-screen md:h-[150vh] bg-brand-ivory">
       <div className="md:sticky md:top-0 md:h-screen flex flex-col justify-center px-8 py-16 md:py-0 max-w-[100rem] mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center w-full">
           
@@ -138,7 +126,7 @@ function EditorialScrollySection({
               <motion.img
                 key={images[activeIndex]}
                 src={encodeURI(images[activeIndex])}
-                alt={lang === 'fr' ? 'Le Domaine de Villa Norah' : 'Villa Norah Estate'}
+                alt={lang === 'ro' ? 'N&D Construct Portofoliu' : 'N&D Construct Portfolio'}
                 className="w-full h-full object-cover absolute inset-0 bg-brand-charcoal/10"
                 custom={direction}
                 variants={slideVariants}
@@ -191,56 +179,56 @@ export default function IntroSection() {
     <div className="flex flex-col">
       {/* 1st Block */}
       <EditorialScrollySection
-        label={lang === 'fr' ? "Le Domaine" : "The Estate"}
-        heading={lang === 'fr' ? "Un Esprit des Lieux" : "A sense of time"}
+        label={lang === 'ro' ? "Amenajări Rezidențiale" : "Residential Fit-outs"}
+        heading={lang === 'ro' ? "Atenție la Detalii" : "Attention to Detail"}
         body={
           <div className="space-y-6">
             <p>
-              {lang === 'fr'
-                ? "À l’intérieur, la villa préserve la tenue et la richesse d’une demeure historique. Détails décoratifs, matériaux rares et identité architecturale affirmée donnent à chaque espace une présence singulière, tout en maintenant une impression d’harmonie et de raffinement à l’échelle de la maison entière."
-                : "Inside, the villa preserves the composure and richness of a historic residence. Decorative detail, rare materials and a strong architectural identity give each space its own presence while maintaining a coherent sense of refinement throughout the house."}
+              {lang === 'ro'
+                ? "Fie că este vorba despre zugrăvirea unui apartament sau despre finisaje complexe într-o vilă nouă, tratăm fiecare casă cu respect. Ne asigurăm că toate suprafețele, pardoselile și mobilierul existent sunt protejate complet pe parcursul execuției lucrărilor."
+                : "Whether it is painting an apartment or executing complex finishes in a new villa, we treat every home with respect. We ensure that all existing surfaces, floors, and furniture are fully protected during the execution of our work."}
             </p>
             <div className="pt-8">
               <Button variant="outline" onClick={() => {
                 setDetailsDir(0);
                 setDetailsIndex(0);
               }}>
-                {lang === 'fr' ? "Plus de détails" : "Explore Details"}
+                {lang === 'ro' ? "Mai multe detalii" : "Explore Details"}
               </Button>
             </div>
           </div>
         }
         images={[
-          `${ASSET_PREFIX}/Interior and garden and pool/Villa -10_converted.webp`,
-          `${ASSET_PREFIX}/Interior and garden and pool/Villa -34_converted.webp`
+          `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
+          `${ASSET_PREFIX}/projects/remodeling-2.jpg`
         ]}
         imagePosition="right"
       />
 
       {/* 2nd Block */}
       <EditorialScrollySection
-        label={lang === 'fr' ? "Le Domaine" : "The Estate"}
-        heading={lang === 'fr' ? "Les Jardins" : "The grounds"}
+        label={lang === 'ro' ? "Spații Comerciale" : "Commercial Spaces"}
+        heading={lang === 'ro' ? "Durabilitate & Design" : "Durability & Design"}
         body={
           <div className="space-y-6">
             <p>
-              {lang === 'fr'
-                ? "Entourée de jardins botaniques, de terrasses et de vues dégagées, Villa Norah déploie une sensation d’espace à la fois paisible et généreuse. Le domaine se découvre entre jardins ombragés, pierre baignée de soleil et instants plus calmes au bord de la piscine, dans une atmosphère à la fois intime et ouverte."
-                : "Surrounded by botanical gardens, terraces and open views, Villa Norah unfolds with a calm and generous sense of space. The estate moves naturally between shaded greenery, sunlit stone and quieter poolside moments, creating an atmosphere that feels both private and expansive."}
+              {lang === 'ro'
+                ? "Pentru magazine, birouri, saloane, showroom-uri sau clinici, oferim servicii rapide de finisaje interioare pentru a asigura deschiderea la termen. Structuri rezistente din rigips, vopsele rezistente la trafic intens și scafe LED spectaculoase."
+                : "For shops, offices, salons, showrooms, or clinics, we offer rapid interior finishing services to ensure on-time openings. Sturdy drywall systems, high-traffic resistant paints, and spectacular LED coves."}
             </p>
             <div className="pt-8">
               <Button variant="outline" onClick={() => {
                 setViewsDir(0);
                 setViewsIndex(0);
               }}>
-                {lang === 'fr' ? "Voir la galerie" : "View Gallery"}
+                {lang === 'ro' ? "Vezi galeria" : "View Gallery"}
               </Button>
             </div>
           </div>
         }
         images={[
-          `${ASSET_PREFIX}/Interior and garden and pool/Villa-130_converted.webp`,
-          `${ASSET_PREFIX}/Interior and garden and pool/Villa-134_converted.webp`
+          `${ASSET_PREFIX}/projects/construction-1.jpg`,
+          `${ASSET_PREFIX}/projects/construction-2.jpg`
         ]}
         imagePosition="left"
       />
