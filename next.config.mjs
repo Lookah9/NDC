@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-
+// Trigger build for GitHub Pages configuration
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repo = 'NDC';
 
