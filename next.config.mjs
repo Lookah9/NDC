@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repo = 'norah';
+const repo = 'NDC';
 
 const basePath = isGithubActions ? `/${repo}` : '';
 
