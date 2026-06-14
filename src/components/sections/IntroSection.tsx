@@ -9,21 +9,21 @@ import { ASSET_PREFIX } from "@/lib/utils";
 import { GalleryModal } from "../GalleryModal";
 
 const detailsGallery = [
-  `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
-  `${ASSET_PREFIX}/projects/remodeling-2.jpg`,
-  `${ASSET_PREFIX}/projects/remodeling-3.jpg`,
-  `${ASSET_PREFIX}/projects/design-1.jpg`,
-  `${ASSET_PREFIX}/projects/design-2.jpg`,
-  `${ASSET_PREFIX}/projects/design-3.jpg`,
+  `${ASSET_PREFIX}/projects/led-1.webp`,
+  `${ASSET_PREFIX}/projects/led-2.webp`,
+  `${ASSET_PREFIX}/projects/led-3.webp`,
+  `${ASSET_PREFIX}/projects/led-4.webp`,
+  `${ASSET_PREFIX}/projects/led-5.webp`,
+  `${ASSET_PREFIX}/projects/led-6.webp`,
 ];
 
 const viewsGallery = [
-  `${ASSET_PREFIX}/projects/repairs-1.jpg`,
-  `${ASSET_PREFIX}/projects/repairs-2.jpg`,
-  `${ASSET_PREFIX}/projects/repairs-3.jpg`,
-  `${ASSET_PREFIX}/projects/construction-1.jpg`,
-  `${ASSET_PREFIX}/projects/construction-2.jpg`,
-  `${ASSET_PREFIX}/projects/construction-3.jpg`,
+  `${ASSET_PREFIX}/projects/led-7.webp`,
+  `${ASSET_PREFIX}/projects/led-8.webp`,
+  `${ASSET_PREFIX}/projects/led-9.webp`,
+  `${ASSET_PREFIX}/projects/led-10.webp`,
+  `${ASSET_PREFIX}/projects/led-11.webp`,
+  `${ASSET_PREFIX}/projects/led-12.webp`,
 ];
 
 function EditorialScrollySection({ 
@@ -199,8 +199,8 @@ export default function IntroSection() {
           </div>
         }
         images={[
-          `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
-          `${ASSET_PREFIX}/projects/remodeling-2.jpg`
+          `${ASSET_PREFIX}/projects/led-13.webp`,
+          `${ASSET_PREFIX}/projects/led-14.webp`
         ]}
         imagePosition="right"
       />
@@ -227,8 +227,8 @@ export default function IntroSection() {
           </div>
         }
         images={[
-          `${ASSET_PREFIX}/projects/construction-1.jpg`,
-          `${ASSET_PREFIX}/projects/construction-2.jpg`
+          `${ASSET_PREFIX}/projects/led-15.webp`,
+          `${ASSET_PREFIX}/projects/led-16.webp`
         ]}
         imagePosition="left"
       />

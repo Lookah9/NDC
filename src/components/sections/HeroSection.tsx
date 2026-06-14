@@ -8,18 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { GalleryModal } from "../GalleryModal";
 
 const heroGallery = [
-  `${ASSET_PREFIX}/projects/remodeling-1.jpg`,
-  `${ASSET_PREFIX}/projects/remodeling-2.jpg`,
-  `${ASSET_PREFIX}/projects/remodeling-3.jpg`,
-  `${ASSET_PREFIX}/projects/design-1.jpg`,
-  `${ASSET_PREFIX}/projects/design-2.jpg`,
-  `${ASSET_PREFIX}/projects/design-3.jpg`,
-  `${ASSET_PREFIX}/projects/repairs-1.jpg`,
-  `${ASSET_PREFIX}/projects/repairs-2.jpg`,
-  `${ASSET_PREFIX}/projects/repairs-3.jpg`,
-  `${ASSET_PREFIX}/projects/construction-1.jpg`,
-  `${ASSET_PREFIX}/projects/construction-2.jpg`,
-  `${ASSET_PREFIX}/projects/construction-3.jpg`,
+  `${ASSET_PREFIX}/projects/led-1.webp`,
+  `${ASSET_PREFIX}/projects/led-2.webp`,
+  `${ASSET_PREFIX}/projects/led-3.webp`,
+  `${ASSET_PREFIX}/projects/led-4.webp`,
+  `${ASSET_PREFIX}/projects/led-5.webp`,
+  `${ASSET_PREFIX}/projects/led-6.webp`,
+  `${ASSET_PREFIX}/projects/led-7.webp`,
+  `${ASSET_PREFIX}/projects/led-8.webp`,
+  `${ASSET_PREFIX}/projects/led-9.webp`,
+  `${ASSET_PREFIX}/projects/led-10.webp`,
+  `${ASSET_PREFIX}/projects/led-11.webp`,
+  `${ASSET_PREFIX}/projects/led-12.webp`,
 ];
 
 export default function HeroSection() {
@@ -48,10 +48,10 @@ export default function HeroSection() {
         <picture>
           <source 
             media="(max-width: 768px)" 
-            srcSet={`${ASSET_PREFIX}/HeroND.png`}
+            srcSet={`${ASSET_PREFIX}/HeroND_converted.webp`}
           />
           <motion.img
-            src={`${ASSET_PREFIX}/HeroND.png`}
+            src={`${ASSET_PREFIX}/HeroND_converted.webp`}
             alt="N&D Construct Premium Interior Finishes"
             className="w-full h-full object-cover object-[center_35%] md:object-center"
             initial={{ scale: 1.05, opacity: 0 }}

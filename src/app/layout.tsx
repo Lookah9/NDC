@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="ro" className={`overscroll-none ${playfair.variable} ${inter.variable}`}>
       <head>
-        <link rel="preload" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/HeroND.png`} as="image" fetchPriority="high" />
+        <link rel="preload" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/HeroND_converted.webp`} as="image" fetchPriority="high" />
       </head>
       <body className="overscroll-none font-sans antialiased text-brand-charcoal bg-brand-ivory min-h-screen">
         <LanguageProvider>
