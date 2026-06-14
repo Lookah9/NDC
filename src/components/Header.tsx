@@ -38,9 +38,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 transition-all duration-500 ease-out bg-transparent"
     >
       {/* Left */}
-      <motion.div style={{ color: textColor }} className="flex-1 text-sm tracking-[0.15em] uppercase font-semibold">
-        N&D Construct
-      </motion.div>
+      <div className="flex-1" />
 
       {/* Center - Logo */}
       <motion.div

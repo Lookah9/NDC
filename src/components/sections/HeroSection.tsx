@@ -88,15 +88,6 @@ export default function HeroSection() {
         </p>
         <div className="flex justify-center w-full gap-4">
           <Button 
-            className="border-white text-white hover:bg-white hover:text-brand-charcoal"
-            onClick={() => {
-              setDirection(0);
-              setGalleryIndex(0);
-            }}
-          >
-            {lang === 'ro' ? 'Vezi Proiecte' : 'View Projects'}
-          </Button>
-          <Button 
             className="bg-transparent text-white border-white/40 hover:border-white hover:bg-white/10"
             onClick={() => {
               document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth' });
