@@ -88,6 +88,14 @@ export default function HeroSection() {
         </p>
         <div className="flex justify-center w-full gap-4">
           <Button 
+            className="border-white text-white hover:bg-white hover:text-brand-charcoal"
+            onClick={() => {
+              window.location.href = "tel:+40733764866";
+            }}
+          >
+            {lang === 'ro' ? 'Sună Acum' : 'Call Now'}
+          </Button>
+          <Button 
             className="bg-transparent text-white border-white/40 hover:border-white hover:bg-white/10"
             onClick={() => {
               document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth' });
