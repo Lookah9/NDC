@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import BackToTop from '@/components/BackToTop';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="overscroll-none font-sans antialiased text-brand-charcoal bg-brand-ivory min-h-screen">
         <LanguageProvider>
           {children}
+          <BackToTop />
         </LanguageProvider>
       </body>
     </html>

@@ -9,7 +9,7 @@ export default function Footer() {
       
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 opacity-60 text-sm mb-16">
         <a href="https://wa.me/40733764866" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">WhatsApp: +40 733 764 866</a>
-        <a href="mailto:contact@ndconstruct.ro" className="hover:opacity-100 transition-opacity">Email: contact@ndconstruct.ro</a>
+        <a href="mailto:N.Dpremiumdesign@gmail.com" className="hover:opacity-100 transition-opacity">Email: N.Dpremiumdesign@gmail.com</a>
       </div>
 
       <div className="w-full max-w-4xl border-t border-brand-stone/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs opacity-50">

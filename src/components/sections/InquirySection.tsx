@@ -163,9 +163,18 @@ export default function InquirySection() {
             />
           </div>
 
-          <div className="pt-8 flex justify-center">
+          <div className="pt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button variant="solid" type="submit">
               {lang === 'ro' ? 'Trimite pe WhatsApp' : 'Send to WhatsApp'}
+            </Button>
+            <Button 
+              variant="outline" 
+              type="button"
+              onClick={() => {
+                window.location.href = "tel:+40733764866";
+              }}
+            >
+              {lang === 'ro' ? 'Sună Acum' : 'Call Now'}
             </Button>
           </div>
         </motion.form>
